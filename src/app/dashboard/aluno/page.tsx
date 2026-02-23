@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const postsExemplo = [
   {
@@ -75,6 +76,7 @@ export default function DashboardAluno() {
 
   return (
     <div className="dashboard">
+      <ThemeToggle position="dashboard" />
       <aside className="sidebar">
         <div className="sidebar-header">
           <img

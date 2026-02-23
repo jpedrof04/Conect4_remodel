@@ -119,6 +119,8 @@ export default function Home() {
   return (
     <>
       <section id="home" className="hero">
+        <div className="decorative-line top"></div>
+        <div className="decorative-line bottom"></div>
         <div className="hero-content">
           <div className="hero-badge">
             <i className="fas fa-graduation-cap"></i>

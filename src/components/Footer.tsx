@@ -1,6 +1,16 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isSpecialPage = pathname?.startsWith("/login") || pathname?.startsWith("/dashboard");
+  
+  if (isSpecialPage) {
+    return null;
+  }
+
   return (
     <footer className="footer">
       <div className="footer-content">

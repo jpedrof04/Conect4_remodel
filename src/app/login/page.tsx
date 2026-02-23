@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Login() {
   const [tipo, setTipo] = useState<"aluno" | "professor">("aluno");
@@ -20,6 +21,7 @@ export default function Login() {
 
   return (
     <div className="login-page">
+      <ThemeToggle />
       <div className="login-container">
         <div className="login-header">
           <img

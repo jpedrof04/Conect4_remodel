@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const alunosExemplo = [
   { id: 1, nome: "João Silva Santos", email: "joao@aluno.com", serie: "2º EM", status: "ativo", cidade: "Barra Bonita" },
@@ -86,6 +87,7 @@ export default function DashboardProfessor() {
 
   return (
     <div className="dashboard">
+      <ThemeToggle position="dashboard" />
       <aside className="sidebar">
         <div className="sidebar-header">
           <img

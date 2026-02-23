@@ -18,6 +18,12 @@ export default function Header() {
   const [theme, setTheme] = useState("light");
   const pathname = usePathname();
 
+  const isSpecialPage = pathname?.startsWith("/login") || pathname?.startsWith("/inscricao") || pathname?.startsWith("/dashboard");
+  
+  if (isSpecialPage) {
+    return null;
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -56,10 +62,16 @@ export default function Header() {
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <nav className="navbar">
         <div className="logo">
-          <Link href="/">
+          <Link href="/" className="logo-link">
+            <img
+              src="/img/icon.png"
+              alt="Barracred Conecta"
+              className="logo-icon"
+            />
             <img
               src="https://www.barracred.com.br/wp-content/uploads/2023/08/barracred.png"
               alt="Barracred Conecta"
+              className="logo-main"
             />
           </Link>
         </div>
