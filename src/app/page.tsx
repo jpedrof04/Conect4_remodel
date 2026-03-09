@@ -17,16 +17,6 @@ const conteudos = [
     desc: "O inglês é uma ferramenta essencial para o mercado de trabalho. Nesse ponto focamos no vocabulário e expressões do mundo corporativo para uma comunicação clara e eficiente.",
   },
   {
-    icon: "fa-chart-line",
-    title: "Educação Financeira",
-    desc: "Os jovens aprendem a planejar e controlar suas finanças, definindo metas realistas. Incentivamos a gestão consciente de recursos para criar hábitos saudáveis e um futuro financeiro mais seguro.",
-  },
-  {
-    icon: "fa-briefcase",
-    title: "Oficinas para o Mercado",
-    desc: "Nossas oficinas ensinam desde elaboração de currículos até simulações de entrevistas, com dicas práticas de especialistas para ingressar no mundo profissional com segurança.",
-  },
-  {
     icon: "fa-people-carry",
     title: "Cooperativismo na Prática",
     desc: "Os jovens aprendem os princípios do cooperativismo, o papel das cooperativas e vivenciam na prática o trabalho em modelo colaborativo.",
@@ -35,11 +25,6 @@ const conteudos = [
     icon: "fa-microphone-alt",
     title: "Palestras Imersivas",
     desc: "Profissionais de diversas áreas compartilham experiências e desafios do mercado, estimulando reflexão e inspirando os jovens a serem protagonistas de suas carreiras.",
-  },
-  {
-    icon: "fa-calendar-star",
-    title: "Feiras e Eventos",
-    desc: "Visitas técnicas, hackathons e eventos culturais proporcionam experiências práticas, networking e ampliação de perspectivas para o futuro profissional.",
   },
   {
     icon: "fa-graduation-cap",
@@ -490,14 +475,6 @@ export default function Home() {
               <p>Networking com o mercado</p>
             </div>
           </div>
-          <a
-            href="https://wa.me/5514996680366?text=Olá,%20quero%20ser%20um%20parceiro%20Barracred%20Conecta!!!"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-whatsapp"
-          >
-            <i className="fab fa-whatsapp"></i> Fale conosco no WhatsApp
-          </a>
         </div>
       </section>
 
