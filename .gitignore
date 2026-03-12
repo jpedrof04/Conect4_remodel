@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+bin/
+obj/
+wwwroot/lib/
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# .NET
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.log
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Ss]/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+
+# Misc
+.DS_Store
+Thumbs.db

@@ -1,0 +1,451 @@
+@{
+    ViewData["Title"] = "Barracred Conecta - Criando Oportunidades e Cooperando para o Futuro";
+}
+
+@{
+    var conteudos = new[]
+    {
+        new { Icon = "fa-brain", Title = "Habilidades Pessoais e Profissionais", Desc = "Trabalhamos autoconhecimento, empatia, habilidades socioemocionais e competências profissionais para formar jovens autônomos e preparados para o mercado de trabalho." },
+        new { Icon = "fa-laptop-code", Title = "Tecnologia da Informação", Desc = "Os alunos aprendem desde sistemas operacionais e hardware até programação, banco de dados e desenvolvimento (front-end, back-end e mobile), preparando-se para o mercado de TI conforme seu perfil e interesse." },
+        new { Icon = "fa-language", Title = "Inglês Técnico", Desc = "O inglês é uma ferramenta essencial para o mercado de trabalho. Nesse ponto focamos no vocabulário e expressões do mundo corporativo para uma comunicação clara e eficiente." },
+        new { Icon = "fa-people-carry", Title = "Cooperativismo na Prática", Desc = "Os jovens aprendem os princípios do cooperativismo, o papel das cooperativas e vivenciam na prática o trabalho em modelo colaborativo." },
+        new { Icon = "fa-microphone-alt", Title = "Palestras Imersivas", Desc = "Profissionais de diversas áreas compartilham experiências e desafios do mercado, estimulando reflexão e inspirando os jovens a serem protagonistas de suas carreiras." },
+        new { Icon = "fa-graduation-cap", Title = "Estágios e Oportunidades", Desc = "Facilitamos oportunidades reais de trabalho e estágios através de parcerias com empresas, ajudando os jovens a aplicar suas habilidades e dar o primeiro passo na carreira." }
+    };
+
+    var missoes = new[]
+    {
+        new { Icon = "fa-bullseye", Title = "Criar Oportunidades", Desc = "Para que os jovens se conheçam melhor e ampliem sua visão de futuro." },
+        new { Icon = "fa-tools", Title = "Oferecer Ferramentas", Desc = "Para que construam seus próprios caminhos com confiança." },
+        new { Icon = "fa-users", Title = "Formar Talentos", Desc = "Engajados com a comunidade e comprometidos com o bem coletivo." },
+        new { Icon = "fa-handshake", Title = "Fortalecer o Cooperativismo", Desc = "Como modelo de transformação social e inclusão." }
+    };
+
+    var equipe = new[]
+    {
+        new { Nome = "Andresa", Cargo = "Coordenadora", Foto = "https://www.barracredconecta.com.br/assets/images/team/andresa.jpg", Linkedin = "https://www.linkedin.com/in/andresa-baratela-2b5544240/", Instagram = "https://www.instagram.com/andresabaratela/", Github = "" },
+        new { Nome = "Adilson", Cargo = "Assistente de Coordenação", Foto = "https://www.barracredconecta.com.br/assets/images/team/adilson.jpg", Linkedin = "https://www.linkedin.com/in/adilson-nascimento-7b5a69b6", Instagram = "https://www.instagram.com/adilsonnascy/", Github = "" },
+        new { Nome = "Profª Aline", Cargo = "Inglês Técnico", Foto = "https://www.barracredconecta.com.br/assets/images/team/aline.jpg", Linkedin = "https://www.linkedin.com/in/aline-pedra-07380381", Instagram = "https://www.instagram.com/alineropedra/", Github = "" },
+        new { Nome = "Profª Cristiane", Cargo = "Hab. Pessoais e Profissionais", Foto = "https://www.barracredconecta.com.br/assets/images/team/cris.jpg", Linkedin = "", Instagram = "https://www.instagram.com/_chris_alvess_/", Github = "" },
+        new { Nome = "Prof. Gallo", Cargo = "Tecnologia da Informação", Foto = "https://www.barracredconecta.com.br/assets/images/team/gallo2.jpg", Linkedin = "https://www.linkedin.com/in/gallo-junior/", Instagram = "", Github = "https://www.github.com/gallojunior" },
+        new { Nome = "Profª Vera", Cargo = "Hab. Pessoais e Profissionais", Foto = "https://www.barracredconecta.com.br/assets/images/team/vera.jpg", Linkedin = "https://www.linkedin.com/in/vera-prado-scudeleti-b54912177/", Instagram = "https://www.instagram.com/veramaraprado/", Github = "" }
+    };
+}
+
+<section id="home" class="hero">
+    <div class="decorative-line top"></div>
+    <div class="decorative-line bottom"></div>
+    <div class="hero-content">
+        <div class="hero-badge">
+            <i class="fas fa-graduation-cap"></i>
+            Programa Social da Cooperativa Barracred
+        </div>
+        <h1>
+            Barracred <span>Conecta</span>
+        </h1>
+        <h2>Criando Oportunidades e Cooperando para o Futuro</h2>
+        <p>
+            Aqui, acreditamos que cada jovem carrega um mundo de possibilidades.
+            Foi por isso que criamos este espaço: para inspirar, capacitar e criar
+            conexões com o futuro por meio da educação, do conhecimento e do
+            desenvolvimento humano.
+        </p>
+        <p>
+            Somos um Programa Social da Cooperativa Barracred, desenvolvido com
+            carinho para abrir caminhos e oferecer oportunidades reais à jovens que
+            desejam crescer como pessoas, desenvolver suas habilidades
+            profissionais e assumir, com consciência, seu papel na sociedade.
+        </p>
+        <p class="destaque">
+            Porque quando a gente coopera, a transformação acontece! E é com esse
+            espírito que seguimos firmes na missão da Barracred: Cooperar para
+            transformar vidas
+        </p>
+        <div class="hero-btns">
+            <a href="/Inscricao" class="btn-primary">
+                Quero Me Inscrever
+            </a>
+            <a href="#sobre" class="btn-secondary">
+                Saiba Mais
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="sobre" class="section sobre">
+    <div class="container">
+        <h2 class="section-title">O que é o Barracred Conecta?</h2>
+        <div class="sobre-content">
+            <div class="sobre-text">
+                <p>
+                    O Barracred Conecta é muito mais do que uma capacitação. É uma
+                    porta de entrada para um novo mundo. Um programa pensado para
+                    preparar jovens para os desafios de hoje e as oportunidades de
+                    amanhã, com uma formação que une técnica, propósito e valores.
+                </p>
+                <p>
+                    Com aulas de Tecnologia da Informação, Inglês Técnico, Educação
+                    Financeira e Desenvolvimento de Habilidades Pessoais e Profissionais,
+                    buscamos formar jovens confiantes, preparados e conscientes,
+                    capazes de atuar com protagonismo na vida e no trabalho.
+                </p>
+                <p>
+                    Além da formação, oferecemos acompanhamento psicológico e apoio
+                    integral, cuidando também da saúde emocional dos alunos ao longo da
+                    jornada.
+                </p>
+                <p class="destaque">
+                    E tudo isso é oferecido de forma totalmente gratuita, graças ao
+                    investimento da Cooperativa Barracred!
+                </p>
+            </div>
+            <div class="sobre-beneficios">
+                <h3>O que a Barracred garante aos participantes:</h3>
+                <ul class="beneficios-list">
+                    <li>
+                        <i class="fas fa-check"></i> Material didático
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i> Uniforme
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i> Vale-transporte
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i> Alimentação
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i> Equipamentos individuais
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i> Laboratório técnico equipado
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionporque">
+    <div class="container">
+        <h2 class="section-title">Por que fazemos o que fazemos?</h2>
+        <p class="section-subtitle" style="color: white;">
+            Porque acreditamos que transformar o futuro começa por acreditar nas
+            pessoas. Cada jovem carrega um potencial único que merece ser
+            desenvolvido com cuidado, respeito e oportunidade.
+        </p>
+        <p class="section-subtitle" style="color: white;">
+            Quando um jovem é fortalecido, ele transforma não só a própria vida,
+            mas também o mundo ao seu redor. É essa mudança que nos move todos os
+            dias.
+        </p>
+        <div class="missao-grid">
+            @foreach (var missao in missoes)
+            {
+                <div class="missao-card">
+                    <i class="fas @missao.Icon"></i>
+                    <h4>@missao.Title</h4>
+                    <p>@missao.Desc</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section id="conteudo" class="section conteudo">
+    <div class="container">
+        <h2 class="section-title">O que você vai aprender?</h2>
+        <div class="conteudo-grid">
+            @foreach (var item in conteudos)
+            {
+                <div class="conteudo-card">
+                    <i class="fas @item.Icon"></i>
+                    <h3>@item.Title</h3>
+                    <p>@item.Desc</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section turma-banner">
+    <div class="turma-banner-bg">
+        <img src="~/img/alunos.png" alt="Nossos alunos" />
+    </div>
+    <div class="turma-banner-overlay"></div>
+    <div class="container">
+        <div class="turma-banner-content">
+            <h2>Transformando Vidas Através da Educação</h2>
+            <p>Mais do que capacitação técnica, formamos jovens prontos para transformar o futuro.</p>
+            <div class="turma-banner-stats">
+                <div class="banner-stat">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Formação Completa</span>
+                </div>
+                <div class="banner-stat">
+                    <i class="fas fa-heart"></i>
+                    <span>Acompanhamento Humano</span>
+                </div>
+                <div class="banner-stat">
+                    <i class="fas fa-rocket"></i>
+                    <span>Oportunidades Reais</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="turma" class="section turma">
+    <div class="container">
+        <h2 class="section-title">Nossa Turma</h2>
+        <p class="section-subtitle">
+            Conheça os jovens que fazem parte do Barracred Conecta. Cada pessoa
+            aqui carrega um sonho e está construindo seu próprio caminho.
+        </p>
+
+        <div class="turma-gallery">
+            <div class="turma-card">
+                <div class="turma-image">
+                    <img src="~/img/geral-pc.png" alt="Turma trabalhando no laboratório" />
+                </div>
+                <div class="turma-info">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Aulas Práticas</h4>
+                    <p>Aprendendo tecnologia em nosso laboratório equipado</p>
+                </div>
+            </div>
+            <div class="turma-card">
+                <div class="turma-image">
+                    <img src="~/img/apresentação.png" alt="Apresentação da turma" />
+                </div>
+                <div class="turma-info">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h4>Apresentações</h4>
+                    <p>Desenvolvendo habilidades de comunicação e apresentação</p>
+                </div>
+            </div>
+            <div class="turma-card">
+                <div class="turma-image">
+                    <img src="~/img/mural.png" alt="Mural da turma" />
+                </div>
+                <div class="turma-info">
+                    <i class="fas fa-users"></i>
+                    <h4>Trabalho em Equipe</h4>
+                    <p>Colaborando e aprendendo juntos</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="turma-stats">
+            <div class="stat-item">
+                <span class="stat-number">20</span>
+                <span class="stat-label">Jovens por turma</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10</span>
+                <span class="stat-label">Meses de formação</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Gratuito</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="participar" class="section participar">
+    <div class="container">
+        <h2 class="section-title">Quem pode participar?</h2>
+        <div class="participar-content">
+            <div class="participar-info">
+                <p>
+                    O programa é destinado à <strong>jovens entre 16 e 20 anos</strong> que buscam mais do que
+                    conhecimento técnico: buscam uma experiência de transformação
+                    pessoal e profissional.
+                </p>
+                <div class="participar-destaques">
+                    <div class="destaque-item">
+                        <i class="fas fa-clock"></i>
+                        <span>
+                            <strong>Duração:</strong> 10 meses
+                        </span>
+                    </div>
+                    <div class="destaque-item">
+                        <i class="fas fa-users"></i>
+                        <span>
+                            <strong>Vagas atuais:</strong> 20
+                        </span>
+                    </div>
+                </div>
+                <div class="vagas-info">
+                    <div class="vaga-item">
+                        <span class="vaga-porcentagem">70%</span>
+                        <span>Para filhos ou dependentes de cooperados da Barracred</span>
+                    </div>
+                    <div class="vaga-item">
+                        <span class="vaga-porcentagem">30%</span>
+                        <span>Para jovens da comunidade em geral</span>
+                    </div>
+                </div>
+            </div>
+            <div class="requisitos-box">
+                <h3>Requisitos:</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-check-circle"></i> Ter entre 16 e 20 anos
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i> Estar cursando ou ter
+                        concluído a educação básica na <strong>rede pública</strong>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i> Residir em
+                        <strong>Barra Bonita</strong> ou
+                        <strong>Igaraçu do Tietê - SP</strong>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i> Ter
+                        <strong>comprometimento e disponibilidade</strong> para
+                        participar integralmente da formação
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="inscrever" class="section cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Gostou do Programa?</h2>
+            <p>
+                Faça parte você também desta transformação. Inscreva-se para
+                próximas turmas!
+            </p>
+            <a href="/Inscricao" class="btn-primary">
+                <i class="fas fa-clipboard-list"></i> Quero Me Inscrever
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="equipe" class="section equipe">
+    <div class="container">
+        <h2 class="section-title">Quem está com você nessa?</h2>
+        <p class="section-subtitle">
+            Construímos uma equipe sólida, capaz de oferecer aos jovens alunos do
+            Programa, oportunidades para desenvolver suas habilidades e adquirir
+            as competências necessárias ao mundo atual.
+        </p>
+        <p class="section-subtitle">
+            Nosso time é composto de profissionais especializados, capazes e
+            dedicados a formação de jovens, desde o básico comportamental até
+            conceitos avançados de programação e tecnologia para desenvolver
+            habilidades baseadas em conceitos atuais do mercado de trabalho.
+        </p>
+        <p class="section-subtitle">
+            Estamos aqui para apoiar, ensinar, escutar e caminhar junto com você
+            — com respeito, acolhimento e entusiasmo.
+        </p>
+
+        <div class="equipe-grid">
+            @foreach (var membro in equipe)
+            {
+                <div class="equipe-card">
+                    <div class="equipe-foto">
+                        <img src="@membro.Foto" alt="@membro.Nome" />
+                    </div>
+                    <h4>@membro.Nome</h4>
+                    <span class="cargo">@membro.Cargo</span>
+                    <div class="equipe-social">
+                        @if (!string.IsNullOrEmpty(membro.Linkedin))
+                        {
+                            <a href="@membro.Linkedin" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        }
+                        @if (!string.IsNullOrEmpty(membro.Instagram))
+                        {
+                            <a href="@membro.Instagram" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        }
+                        @if (!string.IsNullOrEmpty(membro.Github))
+                        {
+                            <a href="@membro.Github" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section id="parceiros" class="section parceiros">
+    <div class="container">
+        <h2 class="section-title">Seja um parceiro dessa transformação</h2>
+        <p class="section-subtitle">
+            Você é empresário, profissional ou representa uma empresa e quer
+            investir em jovens talentos? O Barracred Conecta está sempre aberto a
+            parcerias que acreditam na educação e no desenvolvimento social como
+            motor de mudança.
+        </p>
+        <div class="parceiros-content">
+            <div class="parceiro-item">
+                <i class="fas fa-briefcase"></i>
+                <h4>Ofereça Oportunidades</h4>
+                <p>Estágios e vagas de emprego para nossos jovens</p>
+            </div>
+            <div class="parceiro-item">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h4>Compartilhe Conhecimento</h4>
+                <p>Palestras e mentorias</p>
+            </div>
+            <div class="parceiro-item">
+                <i class="fas fa-handshake"></i>
+                <h4>Facilite Conexões</h4>
+                <p>Networking com o mercado</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="aluno" class="section area-aluno">
+    <div class="container">
+        <div class="aluno-box">
+            <i class="fas fa-user-graduate"></i>
+            <h2>Área do Aluno</h2>
+            <p>
+                Bem-vindo à área exclusiva para alunos do Barracred Conecta. Aqui
+                você encontrará recursos, materiais e informações importantes sobre o
+                programa.
+            </p>
+            <div class="aluno-recursos">
+                <a href="#" class="recurso-card">
+                    <i class="fas fa-book"></i>
+                    <span>Material Didático</span>
+                </a>
+                <a href="#" class="recurso-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Calendário de Aulas</span>
+                </a>
+                <a href="#" class="recurso-card">
+                    <i class="fas fa-video"></i>
+                    <span>Aulas Gravadas</span>
+                </a>
+                <a href="#" class="recurso-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>Fale com a Coordenação</span>
+                </a>
+            </div>
+            <div class="aluno-login">
+                <p>Para acessar, utilize suas credenciais fornecidas pela coordenação.</p>
+                <a href="/Login" class="btn-aluno-login">
+                    Entrar
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

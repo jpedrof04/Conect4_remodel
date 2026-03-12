@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Barracred Conecta</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="~/img/icon.png" type="image/png" />
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://www.barracred.com.br/wp-content/uploads/2023/08/barracred.png" alt="Barracred Conecta" />
+                <span>Conecta</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active">
+                    <i class="fas fa-home"></i> Início
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-user"></i> Meu Perfil
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-book"></i> Material Didático
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-calendar-alt"></i> Calendário
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-video"></i> Aulas Gravadas
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-envelope"></i> Mensagens
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <form asp-area="" asp-controller="Login" asp-action="Index" method="post">
+                    <button type="submit" class="btn-logout">
+                        <i class="fas fa-sign-out-alt"></i> Sair
+                    </button>
+                </form>
+            </div>
+        </aside>
+
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

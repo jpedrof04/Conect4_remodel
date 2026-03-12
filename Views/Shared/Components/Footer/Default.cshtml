@@ -1,0 +1,61 @@
+@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+    var action = ViewContext.RouteData.Values["action"]?.ToString();
+    var isSpecialPage = controller == "Login" || controller == "Dashboard" || action == "Login";
+}
+
+@if (!isSpecialPage)
+{
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://www.barracred.com.br/wp-content/uploads/2023/08/barracred.png" alt="Barracred Conecta" />
+                <p>
+                    Nosso foco é transformar vidas por meio da educação e da tecnologia.
+                    Criamos experiências e soluções que fazem sentido para os jovens e para
+                    a realidade em que vivem. Tudo o que oferecemos nasce do nosso
+                    compromisso com o futuro deles.
+                </p>
+            </div>
+            <div class="footer-info">
+                <h4>Contato</h4>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i> Rua Ferrucio Bolla, 613.
+                        Barra Bonita - SP
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:141996680366">(14) 99668-0366</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:social@barracred.com.br">
+                            social@barracred.com.br
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Home#sobre">Quem Somos</a></li>
+                    <li><a href="/Home#conteudo">Conteúdo</a></li>
+                    <li><a href="/Home#participar">Como Participar</a></li>
+                    <li><a href="/Home#equipe">Equipe</a></li>
+                    <li><a href="/Inscricao">Inscrever-se</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                &copy; 2025 Todos os Direitos Reservados <strong>Barracred Conecta</strong>
+            </p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5514996680366" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+}

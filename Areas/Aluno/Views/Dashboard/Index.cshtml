@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Dashboard - Área do Aluno";
+}
+
+<div class="main-content">
+    <div class="dashboard-header">
+        <h1>Bem-vindo, Aluno!</h1>
+        <p>Aqui está o resumo das suas atividades e recursos disponíveis.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="card">
+            <i class="fas fa-book text-4xl text-primary mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Material Didático</h3>
+            <p class="text-gray-600">Acesse todos os materiais das aulas</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-calendar-alt text-4xl text-primary mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Calendário</h3>
+            <p class="text-gray-600">Veja as próximas aulas e eventos</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-video text-4xl text-primary mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Aulas Gravadas</h3>
+            <p class="text-gray-600">Revise o conteúdo quando quiser</p>
+        </div>
+    </div>
+
+    <div class="perfil-card">
+        <h2 class="text-2xl font-bold mb-4">Seu Perfil</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="font-semibold">Nome:</label>
+                <p>Nome do Aluno</p>
+            </div>
+            <div>
+                <label class="font-semibold">E-mail:</label>
+                <p>aluno@conecta.com</p>
+            </div>
+            <div>
+                <label class="font-semibold">Turma:</label>
+                <p>2025 - Tecnologia da Informação</p>
+            </div>
+            <div>
+                <label class="font-semibold">Status:</label>
+                <p class="text-primary font-semibold">Matriculado</p>
+            </div>
+        </div>
+    </div>
+</div>

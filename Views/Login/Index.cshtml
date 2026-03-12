@@ -1,0 +1,76 @@
+@model MvcConecta.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login - Barracred Conecta";
+    Layout = "_Layout";
+}
+
+<div class="login-page">
+    <div class="login-container">
+        <div class="login-header">
+            <img src="https://www.barracred.com.br/wp-content/uploads/2023/08/barracred.png" alt="Barracred Conecta" class="login-logo" />
+            <h1>Barracred Conecta</h1>
+            <p>Área Restrita</p>
+        </div>
+
+        <form asp-controller="Login" asp-action="Index" method="post">
+            <div class="login-tabs">
+                <button type="submit" name="Tipo" value="aluno" class="tab-btn @(Model?.Tipo == "aluno" || Model?.Tipo == null ? "active" : "")">
+                    <i class="fas fa-user-graduate"></i> Aluno
+                </button>
+                <button type="submit" name="Tipo" value="professor" class="tab-btn @(Model?.Tipo == "professor" ? "active" : "")">
+                    <i class="fas fa-chalkboard-teacher"></i> Professor
+                </button>
+            </div>
+
+            <input type="hidden" name="Tipo" id="Tipo" value="@(Model?.Tipo ?? "aluno")" />
+
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="Email">E-mail</label>
+                    <input type="email" id="Email" name="Email" value="@Model?.Email" 
+                           placeholder="@(Model?.Tipo == "professor" ? "professor@conecta.com" : "seu.email@aluno.com")" required />
+                </div>
+                <div class="form-group">
+                    <label for="Senha">Senha</label>
+                    <input type="password" id="Senha" name="Senha" value="@Model?.Senha" placeholder="••••••••" required />
+                </div>
+                
+                @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ErrorCount > 0)
+                {
+                    <div class="form-mensagem erro">
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <p>@error.ErrorMessage</p>
+                        }
+                    </div>
+                }
+
+                <button type="submit" class="btn-login">
+                    Entrar
+                </button>
+            </div>
+        </form>
+
+        <div class="login-footer">
+            <p>Esqueceu a senha? <a href="#">Clique aqui</a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.tab-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            document.getElementById('Tipo').value = this.value;
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            const emailInput = document.getElementById('Email');
+            if (this.value === 'professor') {
+                emailInput.placeholder = 'professor@conecta.com';
+            } else {
+                emailInput.placeholder = 'seu.email@aluno.com';
+            }
+        });
+    });
+</script>

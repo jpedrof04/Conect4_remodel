@@ -1,0 +1,160 @@
+@model MvcConecta.Models.Inscricao
+
+@{
+    ViewData["Title"] = "Inscrição - Barracred Conecta";
+    Layout = "_Layout";
+}
+
+<section class="inscricao-page">
+    <div class="container">
+        <div class="inscricao-header">
+            <h1>Inscreva-se para Novas Turmas</h1>
+            <p>
+                Preencha o formulário abaixo para se candidatar ao programa Barracred
+                Conecta
+            </p>
+        </div>
+
+        <form asp-controller="Inscricao" asp-action="Index" method="post" class="form-inscricao">
+            <div class="form-section">
+                <h3>Dados Pessoais</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Nome">Nome Completo *</label>
+                        <input asp-for="Nome" type="text" required />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Cpf">CPF *</label>
+                        <input asp-for="Cpf" type="text" id="Cpf" placeholder="000.000.000-00" required />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Nascimento">Data de Nascimento *</label>
+                        <input asp-for="Nascimento" type="date" required />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Telefone">Telefone/WhatsApp *</label>
+                        <input asp-for="Telefone" type="tel" id="Telefone" placeholder="(00) 00000-0000" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">E-mail *</label>
+                    <input asp-for="Email" type="email" required />
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Endereço</h3>
+                <div class="form-group">
+                    <label asp-for="Endereco">Endereço Completo *</label>
+                    <input asp-for="Endereco" type="text" required />
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Cidade">Cidade *</label>
+                        <select asp-for="Cidade" required>
+                            <option value="">Selecione sua cidade</option>
+                            <option value="Barra Bonita">Barra Bonita - SP</option>
+                            <option value="Igaraçu do Tietê">Igaraçu do Tietê - SP</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Informações Educacionais</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Escola">Escola onde estuda/estudou *</label>
+                        <input asp-for="Escola" type="text" required />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Serie">Série/Ano que está cursando *</label>
+                        <select asp-for="Serie" required>
+                            <option value="">Selecione</option>
+                            <option value="1 ano EM">1º Ano do Ensino Médio</option>
+                            <option value="2 ano EM">2º Ano do Ensino Médio</option>
+                            <option value="3 ano EM">3º Ano do Ensino Médio</option>
+                            <option value="Ja conclui">Já concluí</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Informações Adicionais</h3>
+                <div class="form-group">
+                    <label>É filho/dependente de cooperado da Barracred? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="Cooperado" value="sim" required />
+                            <span>Sim</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="Cooperado" value="nao" />
+                            <span>Não</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Conheceu">Como ficou sabendo do programa?</label>
+                    <select asp-for="Conheceu">
+                        <option value="">Selecione</option>
+                        <option value="Redes Sociais">Redes Sociais</option>
+                        <option value="Amigos/Familia">Amigos/Família</option>
+                        <option value="Escola">Escola</option>
+                        <option value="Cooperado">Cooperado Barracred</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Motivos">Por que deseja participar do programa? *</label>
+                    <textarea asp-for="Motivos" rows="4" required></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                Enviar Inscrição
+            </button>
+        </form>
+
+        @if (ViewBag.Mensagem != null)
+        {
+            <div class="form-mensagem @ViewBag.Mensagem.tipo">
+                @ViewBag.Mensagem.texto
+            </div>
+        }
+    </div>
+</section>
+
+<script>
+    document.getElementById('Cpf').addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, "");
+        if (value.length > 11) value = value.slice(0, 11);
+
+        if (value.length > 9) {
+            value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+        } else if (value.length > 6) {
+            value = value.replace(/(\d{3})(\d{3})(\d{3})/, "$1.$2.$3");
+        } else if (value.length > 3) {
+            value = value.replace(/(\d{3})(\d{3})/, "$1.$2");
+        }
+
+        e.target.value = value;
+    });
+
+    document.getElementById('Telefone').addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, "");
+        if (value.length > 11) value = value.slice(0, 11);
+
+        if (value.length > 6) {
+            value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+        } else if (value.length > 2) {
+            value = value.replace(/(\d{2})(\d{4})/, "($1) $2");
+        }
+
+        e.target.value = value;
+    });
+</script>
